@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Body Mass Index Calculator</title>
+</head>
+<body>
+    <h1>Welcome to this Body Mass Index (BMI) Calculator</h1>
+    <p>Please enter the values below.</p>
+
+    <form action="/" method="post">
+        <label for="weight">Weight (kg):</label>
+        <input type="text" id="weight" name="weight" required>
+
+        <label for="height">Height (cm):</label>
+        <input type="text" id="height" name="height" required>
+
+        <button type="submit">Calculate BMI</button>
+    </form>
+
+    {% if bmi is not none %}
+        <h2>Your BMI is: {{ bmi|round(2) }}</h2>
+    {% endif %}
+</body>
+</html>
